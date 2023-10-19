@@ -28,27 +28,29 @@ public class Main {
 			}
 
 			System.out.println("Grade: ");
-			String inputGrade = scanner.nextLine();
+			int inputGrade = scanner.nextInt();
 
-			if (inputGrade.equalsIgnoreCase("Quit")) {
+			if (Integer.toString(inputGrade).equalsIgnoreCase("Quit")) {
 				break;
 			}
 
 			Student student = new Student(inputName, inputSurname, inputGrade);
 
-			if ((Integer.parseInt(inputGrade) > 4 && Integer.parseInt(inputGrade) < 10)) {
+			if (inputGrade >= 5 && inputGrade <= 10) {
+
 				allStudents.add(student);
-				System.out.println("All students: " + allStudents);
 			}else {
 
 				System.out.println("Unknown grade");
 			}
 
-			if (Integer.parseInt(inputGrade) > 5) {
+			if (inputGrade > 5 && inputGrade <= 10) {
 
 				passedStudents.add(student);
-				System.out.println("Passed students: " + passedStudents);
 			}
 		}
+
+		System.out.println("All students: " + allStudents);
+		System.out.println("Passed students: " + passedStudents);
 	}
 }

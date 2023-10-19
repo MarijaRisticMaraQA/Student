@@ -2,9 +2,9 @@ public class Student {
 
 	private String name;
 	private String surname;
-	private String grade;
+	private int grade;
 
-	public Student(String name, String surname, String grade) {
+	public Student(String name, String surname, int grade) {
 
 		this.name = name;
 		this.surname = surname;
